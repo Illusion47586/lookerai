@@ -44,11 +44,26 @@ form {
   display: flex;
   gap: 10px;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.response {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.response p {
+  max-width: min(400px, 90vw);
+  padding: 12px;
+  overflow-wrap: break-word;
 }
 
 button,

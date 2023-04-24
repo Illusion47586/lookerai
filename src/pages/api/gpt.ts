@@ -282,19 +282,6 @@ export default async function handler(
   if (response.status >= 200 && response.status <= 300) {
     reply = response.data.choices[0].text ?? "nothing found";
   } else reply = response.statusText;
-  console.log(response.data);
 
-  // const response = await openai.createChatCompletion({
-  //   messages: [
-  //     { role: "user", content: base_msg },
-  //     { role: "assistant", content: "understood" },
-  //     { role: "user", content: next_msg },
-  //     { role: "user", content: `headout looker url for ${query as string}` },
-  //   ],
-  //   model: "gpt-3.5-turbo",
-  //   temperature: 0.2,
-  //   max_tokens: 500,
-  // });
-  // console.log(response.data.choices);
   res.status(200).json({ reply });
 }
